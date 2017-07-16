@@ -3,7 +3,6 @@
 // ______ and drove off with his __________ wife."
 // noun                          adjective
 
-normal messy code....
 const phrases = document.querySelector("#phrases");
 const text = document.querySelector("#text");
 const button = document.querySelector("#button");
