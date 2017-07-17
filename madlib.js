@@ -18,19 +18,22 @@ class Madlib {
     this._text = this._text.bind(this);
     this._changeType = this._changeType.bind(this);
     this._renderTo = this._renderTo.bind(this);
-
+    this._restart = this._restart.bind(this);
+    this.grammar.innerHTML = this.type[0];
     this.submit.addEventListener("click", this._changeType);
+    this.restart.addEventListener("click", this._restart);
   }
 
   _text() {
-    grammar.innerHTML = "enter a " + this.type[this.start];
+    this.grammar.innerHTML = "enter a " + this.type[this.start];
   }
 
   _changeType() {
     if (!this.sentenceComplete === true) {
       if (this.start === 3) {
         this.words[this.start] = this.input.value;
-        this.grammar.innerHTML = "enter a " + this.type[this.start];
+        console.log(this.grammar);
+        this.grammar.textContent = this.type[this.start];
         this._renderTo();
         this.sentenceComplete = true;
         this.start = 0;
@@ -46,5 +49,14 @@ class Madlib {
 
   _renderTo() {
     this.text.innerHTML = '"'+ this.words[0] + '! he said '+ this.words[1] +' as he jumped into his convertible '+ this.words[2] +' and drove off with his '+ this.words[3] +' wife."'
+  }
+
+  _restart() {
+    this.text.innerHTML = "_____________! he said ________ as he jumped into his convertible ______ and drove off with his __________ wife."
+    this.start = 0;
+    this.sentenceComplete = false;
+    console.log(this.grammar);
+    this.grammar.textContent =  this.type[0];
+    this.words = [];
   }
 }
