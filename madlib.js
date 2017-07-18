@@ -12,14 +12,13 @@ class Madlib {
     this.restart = restart;
     this.grammar = grammar;
     this.sentenceComplete = false;
-    this.type = ["nounone", "adverb", "nountwo", "adjective"];
+    this.type = ["adverb", "nountwo", "adjective"];
     this.words = [];
 
     this._text = this._text.bind(this);
     this._changeType = this._changeType.bind(this);
     this._renderTo = this._renderTo.bind(this);
     this._restart = this._restart.bind(this);
-    this.grammar.innerHTML = this.type[0];
     this.submit.addEventListener("click", this._changeType);
     this.restart.addEventListener("click", this._restart);
   }
@@ -42,9 +41,7 @@ class Madlib {
         this._text();
         this.start++;
       }
-    } else {
-      console.log("finished sentence");
-    }
+    } 
   }
 
   _renderTo() {
@@ -56,7 +53,7 @@ class Madlib {
     this.start = 0;
     this.sentenceComplete = false;
     console.log(this.grammar);
-    this.grammar.textContent =  this.type[0];
+    this.grammar.textContent =  "noun";
     this.words = [];
   }
 }
