@@ -12,7 +12,7 @@ class Madlib {
     this.restart = restart;
     this.grammar = grammar;
     this.sentenceComplete = false;
-    this.type = ["adverb", "nountwo", "adjective"];
+    this.type = ["adverb", "noun", "adjective"];
     this.words = [];
 
     this._text = this._text.bind(this);
@@ -24,7 +24,7 @@ class Madlib {
   }
 
   _text() {
-    this.grammar.innerHTML = "enter a " + this.type[this.start];
+    this.grammar.innerHTML = this.type[this.start];
   }
 
   _changeType() {
