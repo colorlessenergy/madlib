@@ -32,7 +32,7 @@ class Madlib {
       if (this.start === 3) {
         this.words[this.start] = this.input.value;
         console.log(this.grammar);
-        this.grammar.textContent = this.type[this.start];
+        this.grammar.textContent = "complete";
         this._renderTo();
         this.sentenceComplete = true;
         this.start = 0;

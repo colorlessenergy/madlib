@@ -5,19 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>madlib</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
   <script src="madlib.js" defer></script>
   <script src="main.js" defer></script>
 </head>
 <body>
-  <p id="text">
-    "_____________! he said ________ as he jumped into his convertible
-    ______ and drove off with his __________ wife."
-  </p>
-  <div>
-    <p id="grammar">enter a <span id="type">noun</span></p>
-    <input id="phrases" type="text">
-    <button id="button">send</button>
-    <button id="tryAgain">try again</button>
-  </div>
+  <header>
+    <div>
+      <h1>MADLIB</h1>
+      <p>Make your own Stories!</p>
+    </div>
+  </header>
+  <section>
+    <p id="text">
+      "_____________! he said ________ as he jumped into his convertible
+      ______ and drove off with his __________ wife."
+    </p>
+    <div>
+      <p>Enter a <span id="type">noun</span></p>
+      <input id="phrases" placeholder="insert a word" type="text">
+      <button id="button">send</button>
+      <button id="tryAgain">try again</button>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; Brian Munoz</p>
+  </footer>
 </body>
 </html>
