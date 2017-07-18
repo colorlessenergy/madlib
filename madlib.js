@@ -40,8 +40,9 @@ class Madlib {
         this.words[this.start] = this.input.value;
         this._text();
         this.start++;
+        this.input.value = "";
       }
-    } 
+    }
   }
 
   _renderTo() {
@@ -49,7 +50,7 @@ class Madlib {
   }
 
   _restart() {
-    this.text.innerHTML = "_____________! he said ________ as he jumped into his convertible ______ and drove off with his __________ wife."
+    this.text.innerHTML = '"_____________! he said ________ as he jumped into his convertible ______ and drove off with his __________ wife."'
     this.start = 0;
     this.sentenceComplete = false;
     console.log(this.grammar);
